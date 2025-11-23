@@ -110,23 +110,29 @@ useEffect(() => {
 
             {/* 3D Viewer Container */}
             <div className="relative bg-gray-50 w-full h-[450px]">
-              <model-viewer src="/Untitled.glb"
-               camera-controls 
-               auto-rotate 
-               ar 
-               ar-modes="scene-viewer webxr"
-               ar-tracking="world" 
-              interaction-prompt="when-focused"
+            <model-viewer 
+  src="/Untitled.glb"
+  camera-controls
+  auto-rotate
+  ar
+  ar-modes="webxr scene-viewer"
+  ar-tracking="world"
+  interaction-prompt="when-focused"
+  ar-placement="floor"
+  ar-scale="auto"
+  shadow-intensity="1"
+  shadow-softness="0.8"
+  environment-image="https://modelviewer.dev/shared-assets/environments/neutral.hdr"
+  style={{ width: "400px", height: "400px", background: "lightgray" }}
+>
+  <button 
+    slot="ar-button"
+    className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-full shadow-lg font-semibold"
+  >
+    View in AR
+  </button>
+</model-viewer>
 
-                ar-placement="floor" 
-                ar-scale="auto" 
-                shadow-intensity="1" 
-                shadow-softness="0.8"
-                 environment-image="https://modelviewer.dev/shared-assets/environments/neutral.hdr" 
-                //  disable-tap 
-                 style={{ width: "400px", height: "400px", background: "lightgray" }} > 
-                 <button slot="ar-button" className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-full shadow-lg font-semibold" >
-                  View in AR </button></model-viewer>
 {/* <model-viewer
    src="/realistic_burger_fixed.glb"
   camera-controls
