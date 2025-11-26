@@ -110,7 +110,24 @@ useEffect(() => {
 
             {/* 3D Viewer Container */}
             <div className="relative bg-gray-50 w-full h-[450px]">
-            <model-viewer 
+                <model-viewer
+        src="/Untitled.glb" 
+        alt="Food Model"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        camera-controls
+        auto-rotate
+        shadow-intensity="1"
+        exposure="1"
+        ar-scale="auto"
+        ar-placement="floor"
+        style={{
+          width: "100%",
+          height: "100%",
+          backgroundColor: "#f0f0f0",
+        }}
+      ></model-viewer>
+            {/* <model-viewer 
   src="/Untitled.glb"
   camera-controls
   auto-rotate
@@ -131,7 +148,7 @@ useEffect(() => {
   >
     View in AR
   </button>
-</model-viewer>
+</model-viewer> */}
 
 {/* <model-viewer
    src="/realistic_burger_fixed.glb"
