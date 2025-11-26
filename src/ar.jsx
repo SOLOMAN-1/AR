@@ -85,29 +85,38 @@ const App1 = () => {
 
             {/* 3D Viewer Container */}
             <div className="relative bg-gray-50 w-full h-[450px]">
-       <model-viewer
-        src="/Untitled.glb" 
-        alt="Food Model"
-        ar
-        ar-modes="webxr scene-viewer "
-        camera-controls
-        auto-rotate
-        shadow-intensity="1"
-        exposure="1"
-        ar-scale="auto"
-        ar-placement="floor"
-        style={{
-          width: "100%",
-          height: "100%",
-          backgroundColor: "#f0f0f0",
-        }}
-          
-      >  <button 
+      <model-viewer
+  src="/Untitled.glb"
+  alt="Food Model"
+  camera-controls
+  auto-rotate
+  ar
+  ar-modes="webxr scene-viewer quick-look"
+  ar-tracking="world"
+  interaction-prompt="when-focused"
+  ar-placement="floor"
+  ar-scale="auto"
+  shadow-intensity="1"
+  shadow-softness="0.8"
+  environment-image="https://modelviewer.dev/shared-assets/environments/neutral.hdr"
+  exposure="1"
+  style={{
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#f0f0f0",
+    position: "relative",
+    zIndex: 50,
+  }}
+>
+  <button
     slot="ar-button"
-    className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-full shadow-lg font-semibold"
+    className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-orange-600 hover:bg-orange-700 
+               text-white px-6 py-3 rounded-full shadow-lg font-semibold z-50"
   >
     View in AR
-  </button></model-viewer> 
+  </button>
+</model-viewer>
+ 
             {/* <model-viewer 
   src="/Untitled.glb"
   camera-controls
