@@ -114,7 +114,7 @@ useEffect(() => {
         src="/Untitled.glb" 
         alt="Food Model"
         ar
-        ar-modes="webxr scene-viewer quick-look"
+        ar-modes="webxr scene-viewer "
         camera-controls
         auto-rotate
         shadow-intensity="1"
