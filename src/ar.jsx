@@ -85,7 +85,7 @@ const App1 = () => {
 
             {/* 3D Viewer Container */}
             <div className="relative bg-gray-50 w-full h-[450px]">
-        {/* <model-viewer
+       <model-viewer
         src="/Untitled.glb" 
         alt="Food Model"
         ar
@@ -107,8 +107,8 @@ const App1 = () => {
     className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-full shadow-lg font-semibold"
   >
     View in AR
-  </button></model-viewer> */}
-            <model-viewer 
+  </button></model-viewer> 
+            {/* <model-viewer 
   src="/Untitled.glb"
   camera-controls
   auto-rotate
@@ -129,7 +129,7 @@ const App1 = () => {
   >
     View in AR
   </button>
-</model-viewer> 
+</model-viewer>  */}
 
 {/* <model-viewer
    src="/realistic_burger_fixed.glb"
