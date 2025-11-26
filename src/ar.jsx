@@ -10,25 +10,6 @@ const App1 = () => {
   const [scriptLoaded, setScriptLoaded] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
 
-  // 1. DYNAMICALLY LOAD THE MODEL-VIEWER SCRIPT
-  // This script is required to power the AR functionality.
-//   useEffect(() => {
-//     const script = document.createElement('script');
-//     script.type = 'module';
-//    script.src =
-//   "https://unpkg.com/@google/model-viewer@3.3.0/dist/model-viewer.min.js";
-
-//     script.onload = () => {
-//   setScriptLoaded(true);
-//   console.log("Script has loaded!");
-// };
-//     document.body.appendChild(script);
-//   },[]);
-useEffect(() => {
-    if (scriptLoaded) {
-      console.log(scriptLoaded);
-    }
-  },[scriptLoaded]);
   // Mock Data for Food Items
   const foodItems = [
     {
@@ -46,12 +27,6 @@ useEffect(() => {
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans text-slate-800">
-      {/* Header */}
-  
-
-      {/* Main Content */}
-
-
         <div className="grid gap-6">
           {foodItems.map((item) => (
             <div 
@@ -110,7 +85,7 @@ useEffect(() => {
 
             {/* 3D Viewer Container */}
             <div className="relative bg-gray-50 w-full h-[450px]">
-                <model-viewer
+        <model-viewer
         src="/Untitled.glb" 
         alt="Food Model"
         ar
