@@ -101,7 +101,13 @@ const App1 = () => {
           height: "100%",
           backgroundColor: "#f0f0f0",
         }}
-      ></model-viewer>
+          
+      >  <button 
+    slot="ar-button"
+    className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-full shadow-lg font-semibold"
+  >
+    View in AR
+  </button></model-viewer>
             {/* <model-viewer 
   src="/Untitled.glb"
   camera-controls
